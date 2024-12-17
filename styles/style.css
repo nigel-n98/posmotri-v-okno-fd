@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -47,5 +47,300 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Сетка основного контента */
+.content {
+  display: grid;
+  grid-template-areas: "result content__details";
+  grid-template-columns: 711px 399px;
+  gap: 0 30px;
+  align-items: end;
+}
+
+.result {
+  grid-area: result;
+}
+
+.content__details {
+  grid-area: content__details;
+}
+
+/* Правая секция основного контета */
+
+/* Заголовок */
+h1.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 70.5px;
+}
+/* Частичная стилизация заголовка */
+.content__accent {
+  color: #545050;
+}
+
+/* Нижний отступ от заголовка */
+.content__details h1 {
+  margin-bottom: 26px;
+}
+
+/*Контейнер со списком доступных видео*/
+.content__list-container {
+  position: relative;
+  display: block;
+  height: 298px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Убираем подчеркивания ссылок в списке видео */
+.content__card-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Отсупы между списком видео */
+.content__list-item {
+  margin-bottom: 30px;
+  padding: 0 3px 0 3px;
+}
+
+/* Карточка видео и текста в списке */
+.content__video-card {
+  display: flex;
+}
+
+/* Контейнер для текста в списке видео */
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+/* Заголовок h2 в списке видео */
+h2.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  line-height: 30px;
+}
+
+/* Параграф в списке видео */
+p.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 16px;
+}
+
+/* Размеры эскиза видео в списке видео */
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  flex-shrink: 0;
+}
+
+/* Размеры эскиза видео в списке видео */
+.content__video-card-thumbnail img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Кнопка "показать еще" */
+.more-button {
+  width: 100%;
+  min-height: 34px;
+}
+
+/* Стилизация списка видео в :active */
+.content__list-item:active {
+  background-color: #545050;
+}
+
+/* Стилизация списка видео в :hover */
+.content__list-item:hover {
+  text-decoration: underline;
+}
+
+/* ???????????????????? */
+.content__list-item:focus {
+  outline: none;
+}
+
+/* Правая секция основного контета */
+
+/* Контейнер основного видео */
+.result__video-container {
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 386px;
+}
+
+/* Основное видео */
+.result__video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Общие св-ва контейнера поиска */
+.search-form {
+  display: flex;
+  gap: 0 40px;
+}
+
+.search-form__fieldset {
+  border: none;
+  min-width: 212px;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Заголовок формы поиска */
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/* Текстовое поле в форме поиска */
+.search-form__textfield {
+  font-size: 18px;
+  font-family: Fira Sans Condensed;
+  border: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  min-width: 225px;
+  outline: none;
+}
+
+/* Сбрасываем стандартные стили input */
+input[type="text"] {
+  appearance: none;
+  color: #fff;
+}
+
+/* Состояние input в состоянии active  */
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+/* Состояние input в состоянии focus  */
+input[type="text"]:focus {
+  color: #fff;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+  border-radius: 0%;
+}
+
+/* Стилизация подсказки в input */
+input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 400;
+}
+
+/* Контейнер чекбоксов */
+.search-form__checkbox-list {
+  display: flex;
+  gap: 0 15px;
+}
+
+/* Отступ текста от чекбокса */
+.search-form__label-text {
+  margin-left: 5px;
+}
+
+/* Стилизация псевдо-чекбокса */
+.search-form__pseudo-checkbox {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Псевдо-чекбокс в состоянии after */
+.search-form__pseudo-checkbox::after {
+  content: "";
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Отмеченный псевдо-чекбокс */
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  background-color: #fff;
+}
+
+/* Кнопка "Найти" */
+.search-form__submit-button {
+  height: 34px;
+  min-width: 194px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: 0;
+}
+
+/* Общие свойства кнопки */
+.button {
+  font-size: 18px;
+  font-family: Fira Sans Condensed;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+/* Состояние кнопки :hover */
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Состояние кнопки :active */
+.button:active {
+  cursor: default;
+  background-color: #545050;
 }
