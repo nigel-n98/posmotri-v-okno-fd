@@ -101,7 +101,7 @@ h1.title {
 
 /* Нижний отступ от заголовка */
 .content__details h1 {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 /*Контейнер со списком доступных видео*/
