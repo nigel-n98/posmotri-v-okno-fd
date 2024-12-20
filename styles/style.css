@@ -127,7 +127,7 @@ h1.title {
 }
 
 /* Убираем отсупы у последнего элемента списком видео */
-.content__list-item:nth-child(11) {
+.content__list-item:last-child {
   margin-bottom: 0;
 }
 
