@@ -68,8 +68,9 @@ ol {
 .content {
   display: grid;
   grid-template-areas: "result content__details";
-  grid-template-columns: 711px 399px;
-  gap: 0 30px;
+  /* grid-template-columns: 711px 399px; */
+  grid-template-columns: 711px 400px;
+  gap: 0 29px;
   align-items: end;
 }
 
@@ -109,7 +110,7 @@ h1.title {
   position: relative;
   display: block;
   height: 298px;
-  overflow-y: auto;
+  overflow-y: scroll;
   /* overflow-x: hidden; */
 }
 
@@ -121,8 +122,8 @@ h1.title {
 
 /* Отсупы между списком видео */
 .content__list-item {
-  margin-bottom: 31px;
-  padding: 0 3px;
+  margin-bottom: 25px;
+  padding: 2px 2px;
 }
 
 /* Убираем отсупы у последнего элемента списком видео */
@@ -148,7 +149,7 @@ h2.content__video-card-title {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 2px;
-  line-height: 35px;
+  line-height: 34px;
 }
 
 /* Параграф в списке видео */
